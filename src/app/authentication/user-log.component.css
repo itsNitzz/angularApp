@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+/* span{padding-left: 10px;font-size: 15px;margin-top:-2px;text-transform: uppercase;} */
+h5,h6,p,span{text-align: center;color:#23272A;}
+span{margin:0px 10px;color: #23272A;}
+input::placeholder{font-family: Roboto, "Helvetica Neue", sans-serif}
+*{font-family: Roboto, "Helvetica Neue", sans-serif}
+.t-size{font-size: 3rem;font-family: 'Pacifico', cursive;}
+
+
+@media only screen and (max-width: 600px) {
+  .t-size{font-size: 1rem}
+  .-li{font-size:.7rem}
+  .btn-grp{padding: 10px;}
+}
+
+.btn-group{
+  font-family: 'Comfortaa', cursive;
+  font-size: smaller;
+}
+.btn-cover{
+  background-image: url("src/assets/icons/plus.svg");
+  background-size: 1.5rem;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.google{font-size: small;}
+.branding{
+  background-image: url("src/assets/branding/google-logo-512.png");
+  background-repeat: no-repeat;
+  background-size: 1.5rem;
+  background-position: center;
+  border-right: 0px!important;
+  height: 36px;
+  width: 36px;
+}

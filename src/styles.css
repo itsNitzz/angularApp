@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.btn:focus,.btn:active {
+  outline: none !important;
+  box-shadow: none;
+}
+
+.min-w{min-width: 0!important;}
+.min-h{min-height: 0!important;}
+
+.mat-flat-button{
+  min-width: 0!important;
+  min-height: 0!important;
+}
+button>.mat-button-toggle-label-content,.mat-stroked-button{
+  min-width: unset!important;
+  border-radius: 2px!important;
+}
+/*.mat-button{line-height: 25px!important;}*/
+.mat-button-toggle {display: flex;}
+.mat-button-toggle-group-appearance-standard, .mat-button-toggle-standalone.mat-button-toggle-appearance-standard {
+  border-radius: 2px!important;
+}
+
+.mat-card{
+  box-shadow: none!important;
+  border: 1px solid #ced4da;
+}
