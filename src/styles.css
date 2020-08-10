@@ -1,11 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-.btn:focus,.btn:active {
+.btn:focus,.btn:active{
   outline: none !important;
   box-shadow: none;
 }
+textarea:hover, input:hover, textarea:active, input:active, textarea:focus, input:focus {
+  outline:none !important;
+}
+*::-webkit-scrollbar-track{border-radius:2px;width: 2px;margin-top: 100px;margin-bottom:100px;background: transparent;}
+*::-webkit-scrollbar{width: 2px;height:2px;background-color: transparent;}
+*::-webkit-scrollbar-thumb{border-radius:2px;background-color: transparent}
 
+*:hover::-webkit-scrollbar-track{border-radius:2px;width: 2px;margin-top: 100px;margin-bottom:100px;background: #dee2e6;}
+*:hover::-webkit-scrollbar{width: 2px;height:2px;background-color: transparent;}
+*:hover::-webkit-scrollbar-thumb{border-radius:2px;background-color: darkorange}
+
+*{border-color: #d7d7d7!important;}
+.title{font-family: 'Pacifico', cursive;font-weight: normal}
 .min-w{min-width: 0!important;}
 .min-h{min-height: 0!important;}
 
@@ -27,3 +40,9 @@ button>.mat-button-toggle-label-content,.mat-stroked-button{
   box-shadow: none!important;
   border: 1px solid #ced4da;
 }
+
+*{user-select: none;touch-action: none;}
+*::placeholder{
+  color:#aaaaaa!important
+}
+

@@ -4,9 +4,10 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
+
 export class PhotosService {
 
-  private data:any = [];
+  private data: any = [];
   url;
 
   constructor(
@@ -17,7 +18,7 @@ export class PhotosService {
     return this.http.get('https://jsonplaceholder.typicode.com/albums');
   }
 
-  getPhotos = albumId =>{
+  getPhotos = albumId => {
      return this.http.get('https://jsonplaceholder.typicode.com/photos?albumId=' + albumId);
 
   }

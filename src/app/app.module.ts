@@ -1,3 +1,4 @@
+import { PhotosService } from './services/photos.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
@@ -19,13 +20,20 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import { ExperimentDirective } from './experiment.directive';
-
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { PhotosComponent } from './components/photos/photos.component';
+import {AlbumsComponent} from './components/albums/albums.component';
+import {RouterModule} from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserLogComponent,
-    ExperimentDirective
+    ExperimentDirective,
+    DashboardComponent,
+    PhotosComponent, AlbumsComponent
   ],
   imports: [
     BrowserModule,
@@ -45,10 +53,13 @@ import { ExperimentDirective } from './experiment.directive';
 
     HttpClientModule,
     AgmCoreModule.forRoot({
-      apiKey : ''
-    })
+      apiKey: ''
+    }),
+    RouterModule,
+    AppRoutingModule,
+    MatTooltipModule
   ],
-  providers: [],
+  providers: [PhotosService /*creates single instance of photoservice in entire module*/],
   bootstrap: [AppComponent],
   entryComponents: [UserLogComponent]
 })

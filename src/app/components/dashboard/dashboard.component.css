@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+
+*{
+  -webkit-user-select: none;
+  /* Safari */ -ms-user-select: none;
+  /* IE 10+ and Edge */ user-select: none;
+}
+/*.block-body{height: calc(100vh - 2.8rem)!important;}*/
+.header{border-bottom: 1px solid #dee2e6;height: 2.8rem;}
+.title{font-size: 1.5rem;font-family: 'Comfortaa', cursive;background-color: #f4f4f4}
+.sidenav{width: 20vw;}
+.side-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.profile-avatar{
+  border-radius: 5px;
+  height: 3rem;
+  width: 3rem;
+}
+
+p > span{
+  font-size: .76rem;
+  margin-left: .2rem;
+  font-family: Roboto, "Helvetica Neue", sans-serif}
+
+mat-card-content > span:first-child{
+  font-weight: 500;
+  font-size: smaller;
+}
+agm-map {
+  height: 100%;
+  width: 100%;
+}
+
+.sidebar{width: 4rem;border-right: 1px solid #ced4da;}
+.content{width: 100%;display:flex;justify-content: center;align-items: center}
+
+.album{background-image: url("src/assets/icons/grid-fill.svg")}
+.pin{background-image: url("src/assets/icons/bookmark-fill.svg")}
+.logout{background-image: url("src/assets/icons/box-arrow-left.svg")}
+
+.sidebar-inset{
+  background-image: url("src/assets/icons/layout-sidebar-inset.svg");
+}
+
+.btn{
+  background-repeat: no-repeat;background-position: center;background-size: 1.3rem;height: 2rem;width: 2rem;
+  filter: invert(31%) sepia(12%) saturate(473%) hue-rotate(298deg) brightness(92%) contrast(88%);
+}
+.wizard{min-width: 20vw}
+.form-control-plaintext{
+  border-left: 1px solid;
+  padding-left: 1rem ;
+}
+.search{background-image: url("src/assets/icons/search.svg");}

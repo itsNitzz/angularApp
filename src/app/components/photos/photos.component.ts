@@ -19,7 +19,6 @@ export class PhotosComponent implements OnInit {
   ngOnInit(){
     this.albumId = this.route.snapshot.params.albumId;
     this.photos = this.photosService.getPhotos(this.albumId);
-  
   }
 
 
