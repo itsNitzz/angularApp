@@ -61,6 +61,6 @@ import {MatTooltipModule} from '@angular/material/tooltip';
   ],
   providers: [PhotosService /*creates single instance of photoservice in entire module*/],
   bootstrap: [AppComponent],
-  entryComponents: [UserLogComponent]
+  entryComponents: [UserLogComponent, AlbumsComponent]
 })
 export class AppModule { }

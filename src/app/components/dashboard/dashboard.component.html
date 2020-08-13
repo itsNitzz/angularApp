@@ -7,7 +7,7 @@
       <div class="d-flex flex-column justify-content-center align-items-center p-1"></div>
       <div class="d-flex flex-column justify-content-center p-1">
         <div class="btn-group mb-2" role="group" aria-label="Basic example">
-          <button mat-flat-button routerLink="/albums" matTooltip="albums" type="button" class="btn album"></button>
+          <button mat-flat-button type="button" class="btn album" matTooltip="albums"></button>
           <button mat-flat-button matTooltip="bookmark" type="button" class="btn pin"></button>
           <button mat-flat-button matTooltip="logout" type="button" class="btn logout"></button>
         </div>
@@ -28,5 +28,7 @@
   <section
     class="d-flex h-100 justify-content-center align-items-center bg-white text-muted"
     (dblclick)="drawer.toggle()"
-  ></section>
+  >
+<template #dynamic></template>
+</section>
 </mat-sidenav-container>

@@ -1,13 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ViewContainerRef, ComponentRef, ComponentFactoryResolver, Inject } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
 import {UserLogComponent} from '../../authentication/user-log.component';
-
-declare var H: any;
-
-enum winState  {
-  'closed' = 'double click to maximize' ,
-  'open' = 'double click to open side navigation bar'
-}
 
 @Component({
   selector: 'app-dashboard',
@@ -15,29 +8,15 @@ enum winState  {
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+  constructor(public dialog: MatDialog) {
+   }
 
-  title = 'flow';
-  clickState = true;
-  public win: winState = winState.closed;
-  constructor(public dialog: MatDialog) { }
-
-  ngOnInit(): void {
-  }
+   ngOnInit() { }
 
   openDialog(): void {
     const dialogRef = this.dialog.open(UserLogComponent, {
       width: '850px',
       height: '525px'
     });
-  }
-
-  notMaximized() {
-    this.clickState = this.clickState ? false : true;
-    if (this.clickState) {
-      this.win = winState.closed;
-    }
-    else {
-      this.win = winState.open;
-    }
   }
 }
