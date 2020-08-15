@@ -1,13 +1,20 @@
 <mat-sidenav-container class="block-body h-100">
   <mat-sidenav #drawer opened
-               class="sidenav border-right"
+               class="sidenav border-right p-2"
                position="start"
                mode="side">
     <div class="side-wrapper h-100">
-      <div class="d-flex flex-column justify-content-center align-items-center p-1"></div>
+      <div class="d-flex flex-column justify-content-center align-items-center p-1">
+        <div class="input-group mb-2">
+          <input type="text" class="form-control" placeholder="p&v.." aria-label="Username" aria-describedby="basic-addon1">
+          <div class="input-group-append">
+            <button mat-flat-button class="btn btn-secondary" type="button">search</button>
+          </div>
+        </div>
+      </div>
       <div class="d-flex flex-column justify-content-center p-1">
-        <div class="btn-group mb-2" role="group" aria-label="Basic example">
-          <button mat-flat-button type="button" class="btn album" matTooltip="albums"></button>
+        <div class="option btn-group mb-2" role="group" aria-label="Basic example">
+          <button mat-flat-button (click)="addElement()" type="button" class="btn album" matTooltip="albums"></button>
           <button mat-flat-button matTooltip="bookmark" type="button" class="btn pin"></button>
           <button mat-flat-button matTooltip="logout" type="button" class="btn logout"></button>
         </div>
@@ -27,8 +34,7 @@
   </mat-sidenav>
   <section
     class="d-flex h-100 justify-content-center align-items-center bg-white text-muted"
-    (dblclick)="drawer.toggle()"
-  >
-<template #dynamic></template>
+    (dblclick)="drawer.toggle()">
+<template #dynamic class="d-flex h-100 justify-content-center align-items-center bg-white text-muted"></template>
 </section>
 </mat-sidenav-container>

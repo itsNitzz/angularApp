@@ -14,13 +14,13 @@
   flex-direction: column;
   justify-content: space-between;
 }
-
+mat-sidenav{min-width: 270px;}
 .profile-avatar{
   border-radius: 5px;
   height: 3rem;
   width: 3rem;
 }
-
+.mat-button-wrapper{font-size: .9rem!important;}
 p > span{
   font-size: .76rem;
   margin-left: .2rem;
@@ -46,13 +46,18 @@ agm-map {
   background-image: url("src/assets/icons/layout-sidebar-inset.svg");
 }
 
-.btn{
+.option > .btn{
   background-repeat: no-repeat;background-position: center;background-size: 1.3rem;height: 2rem;width: 2rem;
   filter: invert(31%) sepia(12%) saturate(473%) hue-rotate(298deg) brightness(92%) contrast(88%);
 }
+.cat-nav{width: 100%;}
+
 .wizard{min-width: 20vw}
 .form-control-plaintext{
   border-left: 1px solid;
   padding-left: 1rem ;
 }
-.search{background-image: url("src/assets/icons/search.svg");}
+.search{
+  background-image: url("src/assets/icons/search.svg");
+  background-repeat: no-repeat;background-position: center;background-size: 1.3rem;width: 2rem;
+}
