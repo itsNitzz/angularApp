@@ -1,7 +1,8 @@
-import { AlbumsComponent } from './../albums/albums.component';
 import { Component, OnInit, ViewChild, ViewContainerRef, ComponentRef, ComponentFactoryResolver, Inject } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
 import {UserLogComponent} from '../../authentication/user-log.component';
+import {GalleryComponent} from '../../components/gallery/gallery.component';
+import {BookmarkComponent} from '../../components/bookmark/bookmark.component';
 
 interface Food {
   value: string;
@@ -34,7 +35,9 @@ export class DashboardComponent implements OnInit {
   }
 
   addElement(){
-    let childComponent = this.componentFactoryResolver.resolveComponentFactory(AlbumsComponent);
-    this.componentRef = this.target.createComponent(childComponent);
+    const childComponent = this.componentFactoryResolver.resolveComponentFactory(GalleryComponent);
+    if (!this.componentRef) {
+      this.componentRef = this.target.createComponent(childComponent);
+    }
   }
 }

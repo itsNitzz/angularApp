@@ -4,7 +4,9 @@
   -webkit-user-select: none;
   /* Safari */ -ms-user-select: none;
   /* IE 10+ and Edge */ user-select: none;
+  caret-color: #e0a800!important;
 }
+::placeholder{font-family:Calibri, cursive;}
 /*.block-body{height: calc(100vh - 2.8rem)!important;}*/
 .header{border-bottom: 1px solid #dee2e6;height: 2.8rem;}
 .title{font-size: 1.5rem;font-family: 'Comfortaa', cursive;background-color: #f4f4f4}
@@ -40,8 +42,11 @@ agm-map {
 
 .album{background-image: url("src/assets/icons/grid-fill.svg")}
 .pin{background-image: url("src/assets/icons/bookmark-fill.svg")}
-.logout{background-image: url("src/assets/icons/box-arrow-left.svg")}
-
+.bookmarks{background-image: url("src/assets/icons/book-half.svg")}
+.gear{background-image: url("src/assets/icons/gear-wide.svg")}
+.logout{background-image: url("src/assets/icons/box-arrow-in-right.svg");
+  background-repeat: no-repeat;background-position: center;background-size: 1rem;border-radius: 4px!important;    width: 3rem;}
+.logout:hover{filter: invert(18%) sepia(56%) saturate(7495%) hue-rotate(0deg) brightness(109%) contrast(132%);}
 .sidebar-inset{
   background-image: url("src/assets/icons/layout-sidebar-inset.svg");
 }
@@ -58,6 +63,18 @@ agm-map {
   padding-left: 1rem ;
 }
 .search{
-  background-image: url("src/assets/icons/search.svg");
+  background-image: url("src/assets/icons/arrow-right-short.svg");
   background-repeat: no-repeat;background-position: center;background-size: 1.3rem;width: 2rem;
+}
+
+
+/*-----drop-----*/
+.drop{
+  border:1px dashed grey;
+  width: 100%;
+  min-height: 150px;
+  border-radius: 4px;
+  background-image: url("src/assets/icons/bookmark-fill.svg");
+  background-repeat: no-repeat;background-position: center;background-size: 1.3rem;
+  filter: invert(31%) sepia(12%) saturate(473%) hue-rotate(298deg) brightness(92%) contrast(88%);
 }

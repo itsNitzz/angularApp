@@ -21,11 +21,14 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import { ExperimentDirective } from './experiment.directive';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import {GalleryComponent} from './components/gallery/gallery.component';
 import { PhotosComponent } from './components/photos/photos.component';
 import {AlbumsComponent} from './components/albums/albums.component';
 import {RouterModule} from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import { BookmarkComponent } from './components/bookmark/bookmark.component';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     UserLogComponent,
     ExperimentDirective,
     DashboardComponent,
-    PhotosComponent, AlbumsComponent
+    GalleryComponent,
+    PhotosComponent, AlbumsComponent, BookmarkComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +61,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     }),
     RouterModule,
     AppRoutingModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatGridListModule
   ],
   providers: [PhotosService /*creates single instance of photoservice in entire module*/],
   bootstrap: [AppComponent],
