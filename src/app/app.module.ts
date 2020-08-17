@@ -66,6 +66,6 @@ import {MatGridListModule} from '@angular/material/grid-list';
   ],
   providers: [PhotosService /*creates single instance of photoservice in entire module*/],
   bootstrap: [AppComponent],
-  entryComponents: [UserLogComponent, AlbumsComponent]
+  entryComponents: [UserLogComponent, GalleryComponent, BookmarkComponent]
 })
 export class AppModule { }

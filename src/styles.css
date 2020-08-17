@@ -46,7 +46,6 @@ button>.mat-button-toggle-label-content,.mat-stroked-button{
 *::placeholder{
   color:#aaaaaa!important
 }
-
-app-gallery{width: 100%}
-
 ::placeholder{padding-left: 1rem;}
+
+mat-sidenav-content > section > * {width: 100%;height: 100%}

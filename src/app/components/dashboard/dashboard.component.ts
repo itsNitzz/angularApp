@@ -22,8 +22,10 @@ export class DashboardComponent implements OnInit {
     {value: 'pizza-1', viewValue: 'Pizza'},
     {value: 'tacos-2', viewValue: 'Tacos'}
   ];
-  constructor(public dialog: MatDialog, private componentFactoryResolver: ComponentFactoryResolver) {
-   }
+  constructor(
+    public dialog: MatDialog,
+    private componentFactoryResolver: ComponentFactoryResolver
+  ) { }
 
    ngOnInit() { }
 
@@ -34,10 +36,23 @@ export class DashboardComponent implements OnInit {
     });
   }
 
-  addElement(){
-    const childComponent = this.componentFactoryResolver.resolveComponentFactory(GalleryComponent);
-    if (!this.componentRef) {
-      this.componentRef = this.target.createComponent(childComponent);
+  addElement(ComponentType: string){
+    this.target.clear();
+    if (ComponentType === 'Gallery') {
+      this.addGalleryComponent();
     }
+    if (ComponentType === 'Bookmarks') {
+      this.showBookmarksComponent();
+    }
+  }
+
+  addGalleryComponent(){
+    const childComponent = this.componentFactoryResolver.resolveComponentFactory(GalleryComponent);
+    this.componentRef = this.target.createComponent(childComponent);
+  }
+
+  showBookmarksComponent(){
+    const childComponent = this.componentFactoryResolver.resolveComponentFactory(BookmarkComponent);
+    this.componentRef = this.target.createComponent(childComponent);
   }
 }

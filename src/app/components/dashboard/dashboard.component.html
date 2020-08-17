@@ -15,8 +15,8 @@
       <div class="d-flex flex-column justify-content-center p-1">
         <div class="drop mb-2"></div>
         <div class="option btn-group mb-2" role="group" aria-label="Basic example">
-          <button mat-flat-button (click)="addElement()" type="button" class="btn album" matTooltip="albums"></button>
-          <button mat-flat-button matTooltip="bookmarks" type="button" class="btn bookmarks"></button>
+          <button mat-flat-button (click)="addElement('Gallery')" type="button" class="btn album" matTooltip="albums"></button>
+          <button mat-flat-button (click)="addElement('Bookmarks')" matTooltip="bookmarks" type="button" class="btn bookmarks"></button>
           <button mat-flat-button matTooltip="configure" type="button" class="btn gear"></button>
         </div>
         <div class="d-flex">
@@ -37,6 +37,6 @@
     </div>
   </mat-sidenav>
   <section class="h-100" (dblclick)="drawer.toggle()">
-    <div #dynamic class=""></div>
+    <template #dynamic class=""></template>
 </section>
 </mat-sidenav-container>
